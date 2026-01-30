@@ -80,6 +80,8 @@ das arboviroses e das estratégias de prevenção adotadas no Brasil.
 
 ---
 
-## 👨‍🎓 Autor
-Lucas André  
+## 👨‍🎓 Autores e Orientador
+Prof.Roberto Yuri da Silva Franco
+Lucas André Oliveira, Eduardo Nogueira, Cynthia Neiva
 Trabalho acadêmico desenvolvido para fins educacionais.
+
