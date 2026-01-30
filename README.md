@@ -82,7 +82,8 @@ das arboviroses e das estratégias de prevenção adotadas no Brasil.
 
 ## 👨‍🎓 Autores e Orientador
 Professor: Roberto Yuri da Silva Franco  
-Alunos: Lucas André Oliveira, Eduardo Nogueira, Cynthia Neiva
+Alunos: Lucas André Oliveira, Eduardo Nogueira, Cynthia Neiva  
 Trabalho acadêmico desenvolvido para fins educacionais.
+
 
 
