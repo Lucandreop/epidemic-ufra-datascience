@@ -96,5 +96,6 @@ Este projeto evidencia como a Ciência de Dados pode ser aplicada no apoio à an
 **Professor:** Roberto Yuri da Silva Franco  
 **Alunos:** Lucas André Oliveira Pinheiro, Eduardo Nogueira e Cynthia Neiva
 
-Trabalho acadêmico desenvolvido para fins educacionais.
+Trabalho acadêmico desenvolvido para fins educacionais, no âmbito da disciplina **Ciência de Dados I**, do curso de **Bacharelado em Sistemas de Informação**, da **Universidade Federal Rural da Amazônia (UFRA)**.
+
 
