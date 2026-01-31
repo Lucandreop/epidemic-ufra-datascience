@@ -93,7 +93,8 @@ Este projeto evidencia como a Ciência de Dados pode ser aplicada no apoio à an
 
 ## 👨‍🎓 Autores e Orientador
 
-**Professor:** Roberto Yuri da Silva Franco
+**Professor:** Roberto Yuri da Silva Franco  
 **Alunos:** Lucas André Oliveira Pinheiro, Eduardo Nogueira e Cynthia Neiva
 
 Trabalho acadêmico desenvolvido para fins educacionais.
+
