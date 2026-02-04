@@ -1,0 +1,5 @@
+base_dados/*
+!base_dados/base.txt
+*.zip
+*.csv
+*.json
