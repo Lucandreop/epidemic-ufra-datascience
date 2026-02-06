@@ -1,5 +1,10 @@
-base_dados/*
-!base_dados/base.txt
+# Ignorar tudo dentro da pasta dataset/
+dataset/*
+# Exceto o arquivo com as URLs
+!dataset/url_dataset.txt
+# Ignorar qualquer CSV, JSON e ZIP em qualquer pasta
 *.zip
 *.csv
 *.json
+# Ignorar ambiente virtual
+venv/
