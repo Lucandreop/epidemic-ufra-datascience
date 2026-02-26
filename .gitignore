@@ -1,5 +1,18 @@
-base_dados/*
-!base_dados/base.txt
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data files
 *.zip
 *.csv
 *.json
+
+# Raw data folder
+base_dados/*
+!base_dados/base.txt
