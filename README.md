@@ -4,7 +4,7 @@
 
 ---
 
-**Instituição:** Universidade Federal Rural da Amazônia (UFRA) — Instituto de Ciberespacial  
+**Instituição:** Universidade Federal Rural da Amazônia (UFRA) — ICIBE  
 **Curso:** Bacharelado em Sistemas de Informação  
 **Disciplina:** Ciência de Dados I  
 **Professor:** Roberto Yuri da Silva Franco  
