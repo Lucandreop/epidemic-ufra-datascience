@@ -1,101 +1,129 @@
-# Análise de Dados Epidemiológicos: Dengue, Chikungunya, Zika e Febre Amarela
-
-## Implicações para a Vigilância Epidemiológica e Saúde Pública no Brasil
+# 🦟 Análise de Dados Epidemiológicos
+### Dengue · Chikungunya · Zika · Febre Amarela
+##### Implicações para a Vigilância Epidemiológica e Saúde Pública no Brasil
 
 ---
 
-## 📌 Descrição do Projeto
+**Instituição:** Universidade Federal Rural da Amazônia (UFRA) — Instituto de Ciberespacial  
+**Curso:** Bacharelado em Sistemas de Informação  
+**Disciplina:** Ciência de Dados I  
+**Professor:** Roberto Yuri da Silva Franco  
+**Equipe:** Lucas André Oliveira Pinheiro · Eduardo Nogueira · Cynthia Pantoja de Melo Neiva  
+**Período:** 2025.2
 
-Este projeto tem como objetivo aplicar conceitos e técnicas de **Ciência de Dados** na análise epidemiológica das arboviroses **dengue, chikungunya, zika vírus e febre amarela**, utilizando dados públicos de saúde disponibilizados por órgãos oficiais brasileiros.
+---
 
-O estudo busca compreender a **evolução temporal**, a **distribuição epidemiológica** e os **padrões observados** na ocorrência dessas doenças no Brasil, discutindo suas implicações para a **vigilância epidemiológica** e para as **políticas públicas de prevenção e controle**.
+## Descrição
 
-A análise é baseada em dados oficiais, permitindo uma abordagem **exploratória e descritiva**, com foco na interpretação dos fenômenos epidemiológicos observados.
+Este projeto aplica técnicas de Ciência de Dados na análise epidemiológica das arboviroses dengue, chikungunya, zika vírus e febre amarela no Brasil, utilizando dados públicos disponibilizados pelo Ministério da Saúde via plataforma DataSUS.
 
-Ressalta-se que este projeto **não realiza análise direta de dados de cobertura vacinal**, limitando-se aos registros epidemiológicos disponíveis nos sistemas oficiais de notificação. No caso da **febre amarela**, a análise é restrita **exclusivamente aos casos humanos**, não sendo considerados os registros de epizootias em primatas não-humanos.
+O estudo analisa a evolução temporal, a distribuição geográfica e os padrões demográficos das notificações registradas no SINAN (Sistema de Informação de Agravos de Notificação) entre 2015 e 2024, discutindo as implicações dos resultados para a vigilância epidemiológica e para as políticas públicas de saúde.
+
+A análise é restrita aos registros epidemiológicos disponíveis nos sistemas oficiais de notificação, sem análise direta de dados de cobertura vacinal. No caso da febre amarela, foram considerados exclusivamente os casos humanos, excluindo os registros de epizootias em primatas não-humanos, a fim de manter comparabilidade metodológica com as demais doenças analisadas.
 
 ---
 
 ## 🎯 Objetivos
 
-* Analisar a evolução temporal dos casos de dengue, chikungunya, zika e febre amarela no Brasil
-* Comparar a incidência das arboviroses entre diferentes períodos
-* Identificar padrões epidemiológicos e possíveis sazonalidades
-* Discutir as implicações dos resultados para a vigilância epidemiológica e a saúde pública
-* Demonstrar a aplicação prática da Ciência de Dados no contexto da saúde pública
-
----
-
-## 🧠 Fundamentação Teórica
-
-A Ciência de Dados integra estatística, computação e análise de dados para extrair informações relevantes e apoiar a tomada de decisão. No campo da saúde pública, essas técnicas são amplamente utilizadas no **monitoramento de doenças**, na **avaliação de cenários epidemiológicos** e no **planejamento de ações preventivas**.
-
-As arboviroses analisadas neste projeto representam um desafio contínuo para o sistema de saúde brasileiro, exigindo estratégias como **vigilância epidemiológica ativa**, **controle vetorial**, **monitoramento de surtos** e, em contextos específicos, ações de imunização e educação em saúde.
+- Analisar a evolução temporal dos casos de dengue, chikungunya, zika e febre amarela no Brasil
+- Comparar a incidência das arboviroses entre diferentes períodos, estados, faixas etárias e grupos demográficos
+- Identificar padrões epidemiológicos e possíveis sazonalidades
+- Discutir as implicações dos resultados para a vigilância epidemiológica e a saúde pública
+- Demonstrar a aplicação prática da Ciência de Dados no contexto da saúde pública
 
 ---
 
 ## 🗂️ Fonte dos Dados
 
-Os dados analisados neste estudo foram obtidos a partir da plataforma **DataSUS**, sob responsabilidade do **Ministério da Saúde**, no âmbito do **Sistema Nacional de Vigilância Epidemiológica**. As bases utilizadas são provenientes do **Sistema de Informação de Agravos de Notificação (SINAN)**, cujo objetivo é coletar, transmitir e disseminar informações geradas rotineiramente pela vigilância epidemiológica nas três esferas de governo.
+Os dados foram obtidos da plataforma **DataSUS**, do Ministério da Saúde, por meio do SINAN. Os arquivos são baixados automaticamente pelo notebook diretamente das URLs públicas do repositório oficial.
 
-No caso da **Febre Amarela**, os dados são monitorados pela **Coordenação-Geral de Vigilância de Arboviroses (CGARB)**, vinculada ao **Departamento de Doenças Transmissíveis (DEDT)** da **Secretaria de Vigilância em Saúde e Ambiente (SVSA)**. As notificações incluem casos suspeitos e confirmados captados principalmente por meio do **Sinan Net**, além de instrumentos complementares de monitoramento e comunicações diretas aos órgãos de vigilância, como o **Centro de Informações Estratégicas em Vigilância em Saúde (CIEVS)**. Para a vigilância animal, também são utilizados registros do **Sistema de Informação em Saúde Silvestre (SISS-Geo)**.
+| Arbovirose | Período | Formato |
+|---|---|---|
+| Dengue | 2015 – 2024 | CSV compactado (.csv.zip) |
+| Chikungunya | 2017 – 2024 | CSV compactado (.csv.zip) |
+| Zika Vírus | 2016 – 2024 | CSV compactado (.csv.zip) |
+| Febre Amarela (casos humanos) | 1994 – 2025 | JSON compactado (.json.zip) |
 
-Embora a base de dados de Febre Amarela disponibilizada pelo DataSUS contemple registros de casos em **humanos e primatas não-humanos (epizootias)**, neste estudo a análise foi **restrita exclusivamente aos casos humanos**, com o objetivo de manter a **comparabilidade metodológica** com os demais agravos analisados (dengue, chikungunya e zika) e evitar vieses decorrentes de diferenças entre os sistemas de vigilância humana e animal.
+> Os dados de Chikungunya referentes a 2015 e 2016 estão incompletos no repositório do DataSUS — esses anos não contêm a coluna de hospitalização e foram carregados sem esse campo.
 
 ---
 
 ## 🔬 Metodologia
 
-As etapas seguidas no desenvolvimento do projeto incluem:
+O projeto seguiu o ciclo de vida da Ciência de Dados:
 
-1. Coleta de dados públicos a partir do DATASUS
-2. Conversão e organização dos dados em formatos adequados para análise
-3. Limpeza e tratamento dos dados
-4. Análise exploratória dos dados epidemiológicos
-5. Visualização dos resultados por meio de gráficos e tabelas
-6. Interpretação dos padrões observados
+1. **Coleta** — download automatizado dos arquivos públicos via requisições HTTP
+2. **Importação** — leitura seletiva de colunas para otimização de memória (pandas)
+3. **Limpeza** — tratamento de valores ausentes, decodificação das variáveis SINAN e remoção de outliers de idade
+4. **Transformação** — criação de variáveis derivadas (faixa etária, período epidemiológico) e normalização Z-score para comparação entre doenças de magnitudes distintas
+5. **Análise exploratória** — estatísticas descritivas e tabelas de contingência
+6. **Visualização** — 10 gráficos interativos produzidos com Plotly
+7. **Interpretação** — discussão dos padrões observados à luz da literatura epidemiológica
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib / Seaborn
-* Jupyter Notebook ou script `.py`
+- **Python 3.10** — linguagem principal
+- **pandas** — manipulação e análise dos dados tabulares
+- **NumPy** — operações numéricas vetorizadas
+- **Plotly** — visualizações interativas
+- **scikit-learn** — normalização e codificação de variáveis
+- **Jupyter Notebook** — ambiente de desenvolvimento e apresentação
 
 ---
 
-## 📈 Resultados Esperados
+## ▶️ Como Executar
 
-* Visualização clara da evolução temporal das arboviroses analisadas, incluindo a febre amarela (casos humanos)
-* Identificação de padrões epidemiológicos e possíveis sazonalidades
-* Análise descritiva que contribua para a compreensão da dinâmica dessas doenças
-* Discussão crítica sobre as implicações dos achados para a saúde pública
+**Requisitos:** Python 3.10 ou superior e conexão com internet.
+
+```bash
+# 1. Instalar as dependências
+pip install pandas numpy plotly scikit-learn requests openpyxl jupyter
+
+# 2. Abrir o notebook
+jupyter notebook analise_arboviroses.ipynb
+```
+
+Os dados são baixados automaticamente na primeira execução — não é necessário baixar nenhum arquivo manualmente.
+
+> **VS Code:** o notebook já está configurado para renderizar os gráficos Plotly corretamente nesse ambiente.
+
+---
+
+## 📁 Estrutura do Repositório
+
+```
+epidemic-ufra-datascience/
+│
+├── analise_arboviroses.ipynb      # Notebook principal com toda a análise
+├── apresentacao_interativa.html   # Slides interativos (abrir no navegador)
+├── relatorio_epidemiologico.docx  # Relatório acadêmico em formato ABNT
+├── README.md
+│
+└── graficos/                      # Criada ao executar a célula de exportação
+    ├── evolucao_temporal.html
+    ├── dengue_por_uf.html
+    └── ...
+```
 
 ---
 
 ## ⚠️ Limitações
 
-* Possível subnotificação de casos
-* Inconsistências e dados faltantes nas bases oficiais
-* Ausência de variáveis externas, como fatores climáticos ou socioeconômicos
-* Inexistência de análise direta de dados de cobertura vacinal
+- **Subnotificação:** casos leves que não chegam ao atendimento médico não constam nas bases, resultando em subestimativa da incidência real
+- **Inconsistências temporais:** o padrão de preenchimento das fichas melhorou ao longo dos anos, dificultando comparações entre períodos distantes
+- **Ausência de variáveis externas:** dados climáticos, socioeconômicos e de cobertura vacinal não foram incluídos na análise
+- **Recorte descritivo:** não foram realizados testes de hipóteses, modelos preditivos ou análises de causalidade
 
 ---
 
-## 📌 Conclusão
+## Conclusão
 
-Este projeto evidencia como a Ciência de Dados pode ser aplicada no apoio à análise epidemiológica, contribuindo para uma melhor compreensão da dinâmica das arboviroses no Brasil e oferecendo subsídios para reflexões sobre vigilância epidemiológica e ações de saúde pública.
+Os resultados mostram que a dengue mantém circulação endêmica com picos cíclicos — o ano de 2024 registrou o maior volume histórico, com 6,5 milhões de notificações. A chikungunya apresentou crescimento progressivo desde 2017. O zika exibiu o padrão clássico de epidemia em população sem imunidade prévia: pico em 2016 e queda abrupta nos anos seguintes. A febre amarela manteve circulação focal, com surto expressivo entre 2017 e 2019 na Região Sudeste.
+
+O projeto demonstra que é possível construir uma análise epidemiológica robusta a partir de dados públicos, com ferramentas abertas e acessíveis, contribuindo para a compreensão da dinâmica das arboviroses no Brasil.
 
 ---
 
-## 👨‍🎓 Autores e Orientador
-
-**Professor:** Roberto Yuri da Silva Franco  
-**Alunos:** Lucas André Oliveira Pinheiro, Eduardo Nogueira e Cynthia Neiva
-
-Trabalho acadêmico desenvolvido para fins educacionais, no âmbito da disciplina **Ciência de Dados I**, do curso de **Bacharelado em Sistemas de Informação**, da **Universidade Federal Rural da Amazônia (UFRA)**.
-
-
+*Trabalho acadêmico desenvolvido para fins educacionais no âmbito da disciplina Ciência de Dados I — UFRA, 2025.*
