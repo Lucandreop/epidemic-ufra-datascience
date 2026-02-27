@@ -1,15 +1,15 @@
 # 🦟 Análise de Dados Epidemiológicos
-### Dengue · Chikungunya · Zika · Febre Amarela
-##### Implicações para a Vigilância Epidemiológica e Saúde Pública no Brasil
+**Dengue · Chikungunya · Zika · Febre Amarela**  
+*Implicações para a Vigilância Epidemiológica e Saúde Pública no Brasil*
 
----
-
-**Instituição:** Universidade Federal Rural da Amazônia (UFRA) — ICIBE  
-**Curso:** Bacharelado em Sistemas de Informação  
-**Disciplina:** Ciência de Dados I  
-**Professor:** Roberto Yuri da Silva Franco  
-**Equipe:** Lucas André Oliveira Pinheiro · Eduardo Nogueira · Cynthia Pantoja de Melo Neiva  
-**Período:** 2025.2
+| | |
+|---|---|
+| **Instituição** | Universidade Federal Rural da Amazônia (UFRA) — ICIBE |
+| **Curso** | Bacharelado em Sistemas de Informação |
+| **Disciplina** | Ciência de Dados I |
+| **Professor** | Roberto Yuri da Silva Franco |
+| **Equipe** | Lucas André Oliveira Pinheiro · Eduardo Nogueira · Cynthia Pantoja de Melo Neiva |
+| **Período** | 2025.2 |
 
 ---
 
@@ -35,16 +35,16 @@ A análise é restrita aos registros epidemiológicos disponíveis nos sistemas 
 
 ## 🗂️ Fonte dos Dados
 
-Os dados foram obtidos da plataforma **DataSUS**, do Ministério da Saúde, por meio do SINAN. Os arquivos são baixados automaticamente pelo notebook diretamente das URLs públicas do repositório oficial.
+Os dados foram obtidos da plataforma DataSUS, do Ministério da Saúde, por meio do SINAN. Os arquivos são baixados automaticamente pelo notebook diretamente das URLs públicas do repositório oficial.
 
 | Arbovirose | Período | Formato |
 |---|---|---|
-| Dengue | 2015 – 2024 | CSV compactado (.csv.zip) |
-| Chikungunya | 2017 – 2024 | CSV compactado (.csv.zip) |
-| Zika Vírus | 2016 – 2024 | CSV compactado (.csv.zip) |
-| Febre Amarela (casos humanos) | 1994 – 2025 | JSON compactado (.json.zip) |
+| Dengue | 2015 – 2024 | CSV compactado (`.csv.zip`) |
+| Chikungunya | 2017 – 2024 | CSV compactado (`.csv.zip`) |
+| Zika Vírus | 2016 – 2024 | CSV compactado (`.csv.zip`) |
+| Febre Amarela (casos humanos) | 1994 – 2025 | JSON compactado (`.json.zip`) |
 
-> Os dados de Chikungunya referentes a 2015 e 2016 estão incompletos no repositório do DataSUS — esses anos não contêm a coluna de hospitalização e foram carregados sem esse campo.
+> ⚠️ Os dados de Chikungunya referentes a 2015 e 2016 estão incompletos no repositório do DataSUS — esses anos não contêm a coluna de hospitalização e foram carregados sem esse campo.
 
 ---
 
@@ -73,6 +73,42 @@ O projeto seguiu o ciclo de vida da Ciência de Dados:
 
 ---
 
+## 📁 Estrutura do Repositório
+
+```
+TRABALHO-CIENCIA-DADOS/
+│
+├── base_dados/
+│   └── base.txt                           # Base de dados bruta utilizada nas análises
+│
+├── dicionario_dados/
+│   ├── dic_dados_chikungunya.pdf          # Dicionário de variáveis — Chikungunya
+│   ├── dic_dados_dengue.pdf               # Dicionário de variáveis — Dengue
+│   ├── dic_dados_febre amarela.pdf        # Dicionário de variáveis — Febre Amarela
+│   └── dic_dados_zika.pdf                 # Dicionário de variáveis — Zika
+│
+├── relatorio/
+│   └── relatorio_epidemiologico_NAP2.pdf  # Relatório final do projeto
+│
+├── src/
+│   └── analise_arboviroses_NAP2.ipynb     # Notebook principal com toda a análise
+│
+├── .gitignore                             # Arquivos e pastas ignorados pelo Git
+└── README.md                              # Documentação do projeto (este arquivo)
+```
+
+### Descrição das pastas
+
+**`base_dados/`** — Contém os dados brutos utilizados como entrada para as análises. O arquivo `base.txt` reúne os registros epidemiológicos que alimentam o notebook.
+
+**`dicionario_dados/`** — PDFs com os dicionários de variáveis para cada arbovirose estudada. Descrevem o significado de cada campo da base de dados, tipos de valores aceitos e definições técnicas do SINAN.
+
+**`relatorio/`** — Relatório epidemiológico final com os resultados, discussões e conclusões obtidas a partir das análises.
+
+**`src/`** — Código-fonte do projeto. O notebook `analise_arboviroses_NAP2.ipynb` concentra toda a análise: coleta, limpeza, transformação e visualização dos dados.
+
+---
+
 ## ▶️ Como Executar
 
 **Requisitos:** Python 3.10 ou superior e conexão com internet.
@@ -82,30 +118,11 @@ O projeto seguiu o ciclo de vida da Ciência de Dados:
 pip install pandas numpy plotly scikit-learn requests openpyxl jupyter
 
 # 2. Abrir o notebook
-jupyter notebook analise_arboviroses.ipynb
+jupyter notebook src/analise_arboviroses_NAP2.ipynb
 ```
 
-Os dados são baixados automaticamente na primeira execução — não é necessário baixar nenhum arquivo manualmente.
-
+> Os dados são baixados automaticamente na primeira execução — não é necessário baixar nenhum arquivo manualmente.  
 > **VS Code:** o notebook já está configurado para renderizar os gráficos Plotly corretamente nesse ambiente.
-
----
-
-## 📁 Estrutura do Repositório
-
-```
-epidemic-ufra-datascience/
-│
-├── analise_arboviroses.ipynb      # Notebook principal com toda a análise
-├── apresentacao_interativa.html   # Slides interativos (abrir no navegador)
-├── relatorio_epidemiologico.docx  # Relatório acadêmico em formato ABNT
-├── README.md
-│
-└── graficos/                      # Criada ao executar a célula de exportação
-    ├── evolucao_temporal.html
-    ├── dengue_por_uf.html
-    └── ...
-```
 
 ---
 
